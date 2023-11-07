@@ -4,21 +4,21 @@ public class NumberToBreakOn {
     public void printNumbersUntilWithBreakOn(int toBreakWith, int numberToGoUntil) {
 
 
-        if (numberToGoUntil > toBreakWith) {
-            for (int i = 1; i <= numberToGoUntil; i++) {
-                if (i > toBreakWith) {
-                    break;
-                }
-                System.out.println(i);
+        boolean flag = numberToGoUntil > toBreakWith;
 
+        for (int i = 0; i < numberToGoUntil; i++) {
+
+            if (flag) {
+                System.out.println("iterating till the end");
+                flag = false;
             }
 
-        } else {
-            System.out.println("iterating till the end");
-            for (int i = 1; i <= numberToGoUntil; i++) {
-                System.out.println(i);
-
+            if (i > toBreakWith) {
+                break;
             }
+
+            System.out.println(i);
+
         }
 
 
